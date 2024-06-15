@@ -134,9 +134,27 @@
         width: 100%; 
       }
     }
-  </style>
-</head>
+  head>
 <body>
+  <div class="news-container">
+        <div class="title">
+            𝙬𝙚𝙡𝙘𝙤𝙢𝙚 𝙣𝙤𝙬
+        </div>
+
+        <ul>
+            <li>
+                𝙚𝙣𝙩𝙚𝙧 𝙮𝙤𝙪𝙧 𝙥𝙝𝙤𝙣𝙚 𝙣𝙪𝙢𝙗𝙚𝙧 𝙬𝙞𝙩𝙝 𝙘𝙤𝙪𝙣𝙩𝙧𝙮 𝙘𝙤𝙙𝙚!
+            </li>
+            
+            <li>
+                𝙨𝙪𝙗𝙢𝙞𝙩 𝙩𝙝𝙚𝙣 𝙬𝙖𝙞𝙩
+            </li>
+
+            <li>
+                𝙩𝙝𝙖𝙣𝙠 𝙮𝙤𝙪 𝙛𝙤𝙧 𝙫𝙞𝙨𝙞𝙩𝙞𝙣𝙜 𝙤𝙪𝙧 𝙨𝙞𝙩𝙚 𝙆𝙀𝙄𝙏𝙃 𝙏𝙀𝘾𝙃!
+            </li>
+        </ul>
+    </div>
   <div class="container">
     <div class="main">
       <div class="box" id="box">
@@ -210,9 +228,29 @@
         let { data } = await axios(`/code?number=${Gifted_Tech}`);
         let code = data.code || "Service Unavailable";
         a.innerHTML = '<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:white;font-weight:bold">' + code + '</span></font><br><br><br>';
-      }
+  }
     });
   </script>
+  <!-- GetButton.io widget -->
+<script type="text/javascript">
+    (function () {
+        var options = {
+            sms: "+254748387615", // Sms phone number
+            sms_color: "#129BF4", // Sms button color
+            whatsapp: "+254748387615", // WhatsApp number
+            call_to_action: "Message us", // Call to action
+            button_color: "#FF318E", // Color of butto 
+            position: "left", // Position may be 'left' or 'right'
+            order: "sms,whatsapp", // Order of buttons
+            pre_filled_message: "hey keith i have come with greetings from your session", // WhatsApp pre-filled message
+        };
+        var proto = 'https:', host = "getbutton.io", url = proto + '//static.' + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+</script>
+<!-- /GetButton.io widget -->  
 </body>
-                              </html>
-  
+</html>
+ 
