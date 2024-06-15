@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pair Code</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
   <style>
     body {
       display: flex;
@@ -16,7 +12,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background: black;
+      background-color: black;
       font-family: Arial, sans-serif;
     }
 
@@ -33,6 +29,7 @@
       position: relative;
       text-align: center;
       background-color: rgb(0, 0, 0);
+      opacity:0.8;
       border-radius: 10px;
       transform: perspective(1000px) rotateY(0deg);
       box-shadow: 0 0 20px rgba(250, 249, 249, 0.7);
@@ -136,100 +133,22 @@
         border-radius: 0.9rem;
         width: 100%; 
       }
-      .news-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    font-family: "Roboto", sans-serif;
-    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
-}
-
-.news-container .title {
-    position: absolute;
-    background: #0000ff;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 24px;
-    color: white;
-    font-weight: bold;
-    z-index: 200;
-}
-
-.news-container ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    animation: scroll 25s infinite linear;
-}
-
-.news-container ul li {
-    white-space: nowrap;
-    padding: 10px 24px;
-    color: #ffa500;
-    position: relative;
-}
-
-.news-container ul li::after {
-    content:"";
-    width: 1px;
-    height: 100%;
-    background: #ee82ee;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.news-container ul li:last-child::after {
-    display: none;
-}
-
-@keyframes scroll {
-    from {
-        transform: translateX(100%);
-    }
-
-    to {
-        transform: translateX(-1083px);
-
-    }
-}
     }
   </style>
 </head>
 <body>
-  <div class="news-container">
-        <div class="title">
-            𝙬𝙚𝙡𝙘𝙤𝙢𝙚 𝙣𝙤𝙬
-        </div>
-
-        <ul>
-            <li>
-                𝙚𝙣𝙩𝙚𝙧 𝙮𝙤𝙪𝙧 𝙥𝙝𝙤𝙣𝙚 𝙣𝙪𝙢𝙗𝙚𝙧 𝙬𝙞𝙩𝙝 𝙘𝙤𝙪𝙣𝙩𝙧𝙮 𝙘𝙤𝙙𝙚!
-            </li>
-            
-            <li>
-                𝙨𝙪𝙗𝙢𝙞𝙩 𝙩𝙝𝙚𝙣 𝙬𝙖𝙞𝙩
-            </li>
-
-            <li>
-                𝙩𝙝𝙖𝙣𝙠 𝙮𝙤𝙪 𝙛𝙤𝙧 𝙫𝙞𝙨𝙞𝙩𝙞𝙣𝙜 𝙤𝙪𝙧 𝙨𝙞𝙩𝙚 𝙆𝙀𝙄𝙏𝙃 𝙏𝙀𝘾𝙃!
-            </li>
-        </ul>
-    </div>
- <div class="container">
+  <div class="container">
     <div class="main">
       <div class="box" id="box">
         <div id="text">
           <i class="fa fa-user"></i>
           <p>
-            <h3 class="centered-text">𝐊𝐄𝐈𝐓𝐇 𝐓𝐄𝐂𝐇 𝐏𝐀𝐈𝐑 𝐂𝐎𝐃𝐄</h3>
+            <h3 class="centered-text">BELTAH-MD PAIRING CODE</h3>
             <br>
-            <h6>𝐌𝐚𝐝𝐞 𝐛𝐲 𝐊𝐞𝐢𝐭𝐡☬</h6>
+            <h6>Made By Beltah Tech 254</h6>
             <h6>Enter Your Number with Country Code.</h6>
             <div class="input-container">
-              <input placeholder="254748387xxx" type="number" id="number" placeholder="Enter your Phone Pumber with Cuntry Code" name="">
+              <input placeholder="254114141xxx" type="number" id="number" placeholder="Enter your Phone Pumber with Cuntry Code" name="">
               <button id="submit">Submit</button>
             </div>
             
@@ -266,14 +185,14 @@
     b.addEventListener("click", async (e) => {
       e.preventDefault();
       if (!c.value) {
-        a.innerHTML = '<a style="color:white;font-weight:bold">Enter your WhatsApp number with a country code</a><br><br>';
+        a.innerHTML = '<a style="color:white;font-weight:bold">Enter your WhatsApp number with Country Code</a><br><br>';
       } else if (c.value.replace(/[^0-9]/g, "").length < 11) {
-        a.innerHTML = '<a style="color:red;font-weight:bold">Invalid number</a><br><br>';
+        a.innerHTML = '<a style="color:green;font-weight:bold">Invalid Number</a><br><br>';
       } else {
-        const Venocyber_Tech = c.value.replace(/[^0-9]/g, "");
+        const Gifted_Tech = c.value.replace(/[^0-9]/g, "");
         let bb = "";
         let bbc = "";
-        const cc = Venocyber_Tech.split('');
+        const cc = Gifted_Tech.split('');
         cc.map(a => {
           bbc += a;
           if (bbc.length == 3) {
@@ -287,32 +206,13 @@
         c.type = "text";
         c.value = "+" + bb;
         c.style = "color:black;font-size:20px";
-        a.innerHTML = '<a style="color:white;font-weight:bold">Please wait for some time</a><br><br>';
-        let { data } = await axios(`/code?number=${Keith_Tech}`);
+        a.innerHTML = '<a style="color:white;font-weight:bold">Please Wait...</a><br><br>';
+        let { data } = await axios(`/code?number=${Gifted_Tech}`);
         let code = data.code || "Service Unavailable";
         a.innerHTML = '<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:white;font-weight:bold">' + code + '</span></font><br><br><br>';
       }
     });
   </script>
-  <!-- GetButton.io widget -->
-<script type="text/javascript">
-    (function () {
-        var options = {
-            sms: "+254748387615", // Sms phone number
-            sms_color: "#129BF4", // Sms button color
-            whatsapp: "+254748387615", // WhatsApp number
-            call_to_action: "Message us", // Call to action
-            button_color: "#FF318E", // Color of butto 
-            position: "left", // Position may be 'left' or 'right'
-            order: "sms,whatsapp", // Order of buttons
-            pre_filled_message: "hey keith i have come with greetings from your session", // WhatsApp pre-filled message
-        };
-        var proto = 'https:', host = "getbutton.io", url = proto + '//static.' + host;
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    })();
-</script>
-<!-- /GetButton.io widget -->  
 </body>
-</html>
+                              </html>
+  
