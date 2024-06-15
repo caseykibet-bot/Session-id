@@ -2,8 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title> Legacy-Md Session </title>
+  <title>Session Generator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
       display: flex;
@@ -20,7 +29,7 @@
       --color2: rgb(0, 0, 0);
       width: 200px;
       padding: 0.8em 1.75em;
-      background-color: violet;
+      background-color: transparent;
       border-radius: 6px;
       border: .3px solid var(--color);
       transition: .5s;
@@ -72,6 +81,144 @@
       filter: brightness(.7);
       transform: scale(.98);
     }
+    .story {
+      margin: 20px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .audio-controls {
+      margin-top: 20px;
+    }
+
+    .hacker-button {
+      background-color: #FFFF33;
+      color: #6633FF;
+      border: 2px solid #3300FF;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .hacker-button:hover {
+      background-color: #f00;
+      color: #FF33FF;
+    }
+
+    .contact-details {
+      margin-top: 20px;
+      color: #990099;
+    }
+
+    .copyright {
+      margin-top: 20px;
+      color: #FFFF00;
+    }
+    .news-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-family: "Roboto", sans-serif;
+    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
+}
+
+.news-container .title {
+    position: absolute;
+    background: #df2020;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    color: white;
+    font-weight: bold;
+    z-index: 200;
+}
+
+.news-container ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    animation: scroll 25s infinite linear;
+}
+
+.news-container ul li {
+    white-space: nowrap;
+    padding: 10px 24px;
+    color: #494949;
+    position: relative;
+}
+
+.news-container ul li::after {
+    content:"";
+    width: 1px;
+    height: 100%;
+    background: #b8b8b8;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.news-container ul li:last-child::after {
+    display: none;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-1083px);
+
+    }
+  .telegram-btn-container {
+    position: fixed;
+    right: 30px;
+    opacity: 0;
+    bottom: -50px;
+    padding: 24px;
+    animation: fade-up 1000ms forwards;
+    animation-delay: 1000ms;
+}
+
+@keyframes fade-up {
+    100% {
+        bottom: 54px;
+        opacity: 1;
+    }
+}
+
+.telegram-btn-container .telegram-btn {
+    font-size: 300px;
+    color: #0000FF;
+    display: inline-block;
+    transition: all 400ms;
+}
+
+.telegram-btn-container .telegram-btn:hover {
+    transform: scale(1.2);
+}
+
+.telegram-btn-container span {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: #00FFFF;
+    transform: rotateZ(20deg) translateX(10px);
+    opacity: 0;
+    transition: all 400ms;
+}
+
+.telegram-btn-container .telegram-btn:hover + span {
+    transform: rotateZ(0deg) translateX(0px);
+    opacity: 1;
+}
+}
   </style>
 </head>
 <body>
@@ -96,19 +243,15 @@
         </ul>
     </div>
 
-  <center>
-  <button onclick="window.open(`/qr`)" class="btn">qr code</button>
+  <center>  
+ <button onclick="window.open(`/qr`)" class="btn">qr code</button>
   <button onclick="window.open(`/pair`)" class="btn">pair code</button>
-  <button onclick="window.open(`https://github.com/keithkeizzah`)" class="btn">github</button>
-  <button onclick="window.open(`https://wa.me/254748387615`)" class="btn">Contact Me</button>
-  <button onclick="window.open(`https://dashboard.heroku.com/new?template=https://https://github.com/keithkeizzah/HUNCHO-MD`)" class="btn">DEPLOY HUNCHO-MD</button>
-  <button onclick="window.open(`https://chat.whatsapp.com/KeEYrEX8UDdGD4m4GbdHaA`)" class="btn">Wa Group</button>
-  <button onclick="window.open(`https://whatsapp.com/channel/0029Vaan9TF9Bb62l8wpoD47`)" class="btn">Wa Channel</button>
-  <button onclick="window.open(`https://www.instagram.com/keizzah_keith?igsh=MW12ZWRjOTZ2MWJyNQ==`)" class="btn">Instagram</button>
-  <button onclick="window.open(`https://youtube.com/@keithkeizzah`)" class="btn">YouTube</button>
-  <button onclick="window.open(`https://https://github.com/keithkeizzah/keith-tech-1`)" class="btn">Deploy my other bot ALPHA MD</button>
-  
-</center>
+  <button onclick="window.open(`https://github.com/Keithkeizzah/KEITH-MD`)" class="btn">deploy KEITH MD</button>
+  <button onclick="window.open(`https://github.com/Keithkeizzah/HUNCHO-MD`)" class="btn">deploy HUNCHO MD</button>
+  <button onclick="window.open(`https://github.com/Keithkeizzah/keith-tech-1`)" class="btn">deploy ALPHA MD</button>
+  </center>
+
+
 
   <div class="copyright">
     <center>
