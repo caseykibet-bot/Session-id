@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pair Code</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
   <style>
     body {
       display: flex;
@@ -12,7 +16,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background: url("https://telegra.ph/file/55eaf9eaa44d70e1d141f.jpg") no-repeat center center fixed;
+      background: black;
       font-family: Arial, sans-serif;
     }
 
@@ -29,7 +33,6 @@
       position: relative;
       text-align: center;
       background-color: rgb(0, 0, 0);
-      opacity:0.8;
       border-radius: 10px;
       transform: perspective(1000px) rotateY(0deg);
       box-shadow: 0 0 20px rgba(250, 249, 249, 0.7);
@@ -133,8 +136,68 @@
         border-radius: 0.9rem;
         width: 100%; 
       }
+      .news-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-family: "Roboto", sans-serif;
+    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
+}
+
+.news-container .title {
+    position: absolute;
+    background: #0000ff;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    color: white;
+    font-weight: bold;
+    z-index: 200;
+}
+
+.news-container ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    animation: scroll 25s infinite linear;
+}
+
+.news-container ul li {
+    white-space: nowrap;
+    padding: 10px 24px;
+    color: #ffa500;
+    position: relative;
+}
+
+.news-container ul li::after {
+    content:"";
+    width: 1px;
+    height: 100%;
+    background: #ee82ee;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.news-container ul li:last-child::after {
+    display: none;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
     }
-  head>
+
+    to {
+        transform: translateX(-1083px);
+
+    }
+}
+    }
+  </style>
+</head>
 <body>
   <div class="news-container">
         <div class="title">
@@ -155,7 +218,7 @@
             </li>
         </ul>
     </div>
-  <div class="container">
+ <div class="container">
     <div class="main">
       <div class="box" id="box">
         <div id="text">
@@ -203,14 +266,14 @@
     b.addEventListener("click", async (e) => {
       e.preventDefault();
       if (!c.value) {
-        a.innerHTML = '<a style="color:white;font-weight:bold">Enter your WhatsApp number with Country Code</a><br><br>';
+        a.innerHTML = '<a style="color:white;font-weight:bold">Enter your WhatsApp number with a country code</a><br><br>';
       } else if (c.value.replace(/[^0-9]/g, "").length < 11) {
-        a.innerHTML = '<a style="color:green;font-weight:bold">Invalid Number</a><br><br>';
+        a.innerHTML = '<a style="color:red;font-weight:bold">Invalid number</a><br><br>';
       } else {
-        const Gifted_Tech = c.value.replace(/[^0-9]/g, "");
+        const Venocyber_Tech = c.value.replace(/[^0-9]/g, "");
         let bb = "";
         let bbc = "";
-        const cc = Gifted_Tech.split('');
+        const cc = Venocyber_Tech.split('');
         cc.map(a => {
           bbc += a;
           if (bbc.length == 3) {
@@ -224,11 +287,11 @@
         c.type = "text";
         c.value = "+" + bb;
         c.style = "color:black;font-size:20px";
-        a.innerHTML = '<a style="color:white;font-weight:bold">Please Wait...</a><br><br>';
-        let { data } = await axios(`/code?number=${Gifted_Tech}`);
+        a.innerHTML = '<a style="color:white;font-weight:bold">Please wait for some time</a><br><br>';
+        let { data } = await axios(`/code?number=${Keith_Tech}`);
         let code = data.code || "Service Unavailable";
         a.innerHTML = '<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:white;font-weight:bold">' + code + '</span></font><br><br><br>';
-  }
+      }
     });
   </script>
   <!-- GetButton.io widget -->
@@ -253,4 +316,3 @@
 <!-- /GetButton.io widget -->  
 </body>
 </html>
- 
