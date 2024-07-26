@@ -12,7 +12,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-color: white;
+      background-color: blue;
       font-family: Arial, sans-serif;
     }
 
@@ -209,7 +209,7 @@
         a.innerHTML = '<a style="color:white;font-weight:bold">Please Wait...</a><br><br>';
         let { data } = await axios(`/code?number=${Gifted_Tech}`);
         let code = data.code || "Service Unavailable";
-        a.innerHTML = '<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:white;font-weight:bold">' + code + '</span></font><br><br><br>';
+        a.innerHTML = '<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:red;font-weight:bold">' + code + '</span></font><br><br><br>';
       }
     });
   </script>
