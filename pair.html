@@ -12,7 +12,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-color: yellow;
+      background-color: white;
       font-family: Arial, sans-serif;
     }
 
@@ -86,7 +86,7 @@
       font-weight: 700;
       letter-spacing: 0.3rem;
       text-transform: uppercase;
-      color: white;
+      color: yellow;
       border: none;
       width: 90%;
       border-radius: 0 1rem 1rem 0;
@@ -173,7 +173,7 @@
       let obj = document.getElementById("copy");
       await navigator.clipboard.writeText(obj.innerText.replace('CODE: ', ''));
       obj.innerText = "COPIED";
-      obj.style = "color:blue;font-weight:bold";
+      obj.style = "color:pink;font-weight:bold";
       obj.size = "5";
       setTimeout(() => {
         obj.innerText = text;
