@@ -1,47 +1,103 @@
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Session Generator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>.:: KEITH-MD ::.</title>
+  <meta name="theme-color" content="#f0a500">
+  <meta name="theme-color" content="#f0a500">
+  <meta name="description" content="Pairing session for KEITH-MD.">
+<meta name="author" content="keithkeizzah">
+<meta name="robots" content="all"> 
+<meta name="robots schedule" content="auto"> 
+<meta name="distribution" content="global"> 
+<meta name="googlebot" content="index,follow">
+<meta property="og:title" content=".:: KEITH-MD ::."/>  
+<meta name="description" content=" [+] Pairing session for KEITH-MD [+] "> 
+<meta property="og:image" content="/bg.jpg">
+<link href="/style.css" rel="stylesheet">
+
+
+  <link rel="shortcut icon" href="/icone.jpg">
+
   <style>
+    @import url('https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d-float');
+    @import url('https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple');
+    @import url('https://fonts.googleapis.com/css2?family=Aladin&family=Grenze+Gotisch:wght@900&family=Jolly+Lodger&family=New+Rocker&display=swap');
+
     body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       height: 100vh;
       margin: 0;
-      background-image: url("https://telegra.ph/file/daff8fabb14e759b112d1.jpg"); /* set the background image*/
+      background-image: url("https://telegra.ph/file/ef834bba2b3de3e57ca59.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      color: #f0f0f0;
+      font-family: 'Roboto', sans-serif;
     }
+
+    header {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 50px
+    }
+
+    h1 {
+      /*font-family: 'Fire code', sans-serif;*/
+      font-family: 'New Rocker',cursive;
+      font-size: 3.2em;
+      color: Blue;
+      margin: 0;
+      text-shadow: 
+                2px 2px 0 #000, 
+                -2px -2px 0 #000, 
+                -2px 2px 0 #000, 
+                2px -2px 0 #000,
+                2px 0 0 #000, 
+                -2px 0 0 #000, 
+                0 2px 0 #000, 
+                0 -2px 0 #000;
+    }
+
+    h2 {
+      font-family: 'Fira Code', sans-serif;
+      font-size: 0.8em;
+      color: #d3d0c2;
+      margin: 5px 0 30px;
+      opacity: 0.8;
+    }
+
     .btn {
-      --color: #e5f5f1;
-      --color2: rgb(0, 0, 0);
-      width: 200px;
-      padding: 0.8em 1.75em;
-      background-color: transparent;
+      --primary-color: #a9263e;
+      --secondary-color: #5a806c;
+      width: 180px;
+      padding: 0.6em 1.5em;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
       border-radius: 6px;
-      border: .3px solid var(--color);
-      transition: .5s;
+      border: 1px solid var(--primary-color);
+      transition: 0.5s;
       position: relative;
       overflow: hidden;
       cursor: pointer;
       z-index: 1;
-      font-weight: 300;
-      font-size: 17px;
-      font-family: 'Roboto', 'Segoe UI', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      font-family: 'Fira Code', monospace;
       text-transform: uppercase;
-      color: var(--color);
-      margin-bottom: 24px;
+      color: var(--secondary-color);
+      margin-bottom: 15px;
+      top: -30px;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;    
     }
 
     .btn::after, .btn::before {
@@ -54,8 +110,8 @@
       inset: 50%;
       left: 25%;
       z-index: -1;
-      transition: .5s ease-out;
-      background-color: var(--color);
+      transition: 0.5s ease-out;
+      background-color: var(--primary-color);
     }
 
     .btn::before {
@@ -73,161 +129,214 @@
     }
 
     .btn:hover {
-      color: var(--color2);
+      /*color: var(--secondary-color);*/
+      color: black;
+      font-weight: 600;
     }
 
     .btn:active {
-      filter: brightness(.7);
-      transform: scale(.98);
-    }
-    .story {
-      margin: 20px;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.8);
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      filter: brightness(0.7);
+      transform: scale(0.98);
     }
 
-    .audio-controls {
-      margin-top: 20px;
-    }
 
-    .hacker-button {
-      background-color: #FFFF33;
-      color: #6633FF;
-      border: 2px solid #3300FF;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-right: 10px;
-    }
-
-    .hacker-button:hover {
-      background-color: #f00;
-      color: #FF33FF;
-    }
-
-    .contact-details {
-      margin-top: 20px;
-      color: #990099;
-    }
-
-    .copyright {
-      margin-top: 20px;
-      color: #FFFF00;
-    }
-    .news-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    font-family: "Roboto", sans-serif;
-    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
+.btn:nth-of-type(1) {
+    animation: shrink 2.4s infinite 0s;
 }
 
-.news-container .title {
-    position: absolute;
-    background: #df2020;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 24px;
-    color: white;
-    font-weight: bold;
-    z-index: 200;
+.btn:nth-of-type(2) {
+    animation: shrink 2.4s infinite 0.4s;
 }
 
-.news-container ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    animation: scroll 25s infinite linear;
+.btn:nth-of-type(3) {
+    animation: shrink 2.4s infinite 0.8s;
 }
 
-.news-container ul li {
-    white-space: nowrap;
-    padding: 10px 24px;
-    color: #494949;
-    position: relative;
+.btn:nth-of-type(4) {
+    animation: shrink 2.4s infinite 1.2s;
 }
 
-.news-container ul li::after {
-    content:"";
-    width: 1px;
-    height: 100%;
-    background: #b8b8b8;
-    position: absolute;
-    top: 0;
-    right: 0;
+.btn:nth-of-type(5) {
+    animation: shrink 2.4s infinite 1.6s;
 }
 
-.news-container ul li:last-child::after {
-    display: none;
+.btn:nth-of-type(6) {
+    animation: shrink 2.4s infinite 2s;
 }
 
-@keyframes scroll {
-    from {
-        transform: translateX(100%);
+@keyframes shrink {
+    0% {
+        transform: scale(1);
     }
-
-    to {
-        transform: translateX(-1083px);
-
+    50% {
+        transform: scale(0.9);
     }
-  .telegram-btn-container {
-    position: fixed;
-    right: 30px;
-    opacity: 0;
-    bottom: -50px;
-    padding: 24px;
-    animation: fade-up 1000ms forwards;
-    animation-delay: 1000ms;
-}
-
-@keyframes fade-up {
     100% {
-        bottom: 54px;
-        opacity: 1;
+        transform: scale(1);
     }
 }
 
-.telegram-btn-container .telegram-btn {
-    font-size: 300px;
-    color: #0000FF;
-    display: inline-block;
-    transition: all 400ms;
+
+
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.8em;
+      color: #f0f0f0;
+    }
+
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: transparent; /* Transparent background */
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.3s;
+  color: #a9263e; /* Orange color for the icon */
+  font-size: 24px;
+  padding: 10px;
 }
 
-.telegram-btn-container .telegram-btn:hover {
-    transform: scale(1.2);
+.menu-btn:hover {
+  transform: scale(1.1);
+  color: blue; /* Slightly darker orange on hover */
 }
 
-.telegram-btn-container span {
-    position: absolute;
-    top: 0;
-    right: 5px;
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
-    color: #00FFFF;
-    transform: rotateZ(20deg) translateX(10px);
-    opacity: 0;
-    transition: all 400ms;
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  color: #f0f0f0;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
 }
 
-.telegram-btn-container .telegram-btn:hover + span {
-    transform: rotateZ(0deg) translateX(0px);
-    opacity: 1;
+.sidebar.show {
+  transform: translateX(0);
 }
+
+.sidebar.lock {
+  transform: translateX(0);
+}
+
+.sidebar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 2px dotted #047601;
+}
+
+.sidebar .profile-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  color: #d3d0c2;
+}
+
+.sidebar .bio {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8em;
+  color: blue;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+  
+}
+
+.sidebar .follow-btn {
+  width: 150px;
+  padding: 0.4em 1em;
+  background-color: blue;
+  border-radius: 6px;
+  border: 1px solid #a9263e;
+  transition: 0.3s;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Fira Code', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  opacity: 0.8;
+   background: linear-gradient(-45deg, 2f5c4f, #5a806c, #c14a5e, #773849);
+   background-size: 400% 400%;
+   animation: gradient 10s ease infinite;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+@keyframes gradient {
+   0% {
+       background-position: 0% 50%;
+   }
+   50% {
+       background-position: 100% 50%;
+   }
+   100% {
+       background-position: 0% 50%;
+   }
+}
+
+
+.sidebar .follow-btn:hover {
+  color: red;
+}
+
+#love {
+ position: relative;
+ margin-top: 95px;
+text-align: center;
+ font-family: 'Courier New', Courier, monospace;
+ font-size: 0.9em;
+ color: #d3d0c2;
 }
   </style>
 </head>
 <body>
-  
-  <div class="news-container">
-        <div class="title">
-            𝐡𝐞𝐥𝐥𝐨 𝐮𝐬𝐞𝐫
-        </div>
 
-        <ul>
+  <header>
+    <h1 id="titre">KEITH-MD</h1>
+    <h2>𝙿𝚛𝚘𝚟𝚒𝚍𝚎𝚜 𝚋𝚎𝚜𝚝 𝚠𝚊 𝚋𝚘𝚝𝚜 𝚎𝚟𝚎𝚛 𝚒𝚗 𝚑𝚒𝚜𝚝𝚘𝚛𝚢 <br>𝙱𝙴𝙻𝙾𝚆 𝙰𝚁𝙴 𝙼𝚈 𝙿𝙰𝙸𝚁 𝙲𝙾𝙳𝙴,𝚀𝚁 𝙲𝙾𝙳𝙴 𝙰𝙽𝙳 𝙼𝚈 𝙱𝙾𝚃 𝚁𝙴𝙿𝙾𝚂</h2>
+  </header>
+
+  <button class="menu-btn" onclick="toggleSidebar()">&#9776;</button>
+
+<div class="sidebar" id="sidebar">
+  <img src="https://telegra.ph/file/06c80661215215af2b78e.jpg" alt="Profile Picture" id="profile-pic">
+  <div class="profile-name"onclick="redirigerVersWhatsApp()">@keithkeizzah</div>
+  <div class="bio">𝚝𝚑𝚒𝚜 𝚒𝚜 𝙺𝚎𝚒𝚝𝚑 𝙺𝚎𝚒𝚣𝚣𝚊𝚑 𝚊 𝚏𝚛𝚘𝚗𝚝𝚎𝚗𝚍 𝚍𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛 𝚊𝚗𝚍 𝚠𝚎𝚋 𝚍𝚎𝚜𝚒𝚐𝚗𝚎𝚛...<br>Follow me</div>
+ 
+  <a href="https://chat.whatsapp.com/BXVmus83Yfq8SjNv63SAhJ" class="follow-btn" target="_blank">WA GROUP</a>
+  <a href="https://dashboard.render.com/register" class="follow-btn" target="_blank">WA CHANNEL</a>
+  <a href="https://t.me/keithmd" class="follow-btn" target="_blank">TELGRAM GROUP</a>
+  <a href="https://github.com/keithkeizzah/" class="follow-btn" target="_blank">GITHUB</a>
+  <a href="https://youtube.com/@keithkeizzah" class="follow-btn" target="_blank">YOUTUBE</a>
+  <a href="wa.me/237620114013" class="follow-btn" target="_blank"> Contact Me</a>
+
+  <a id="love">@Keith 2024</>
+ 
+</div>
+ <ul>
             <li>
                 welcome to Keith innovations!
             </li>
@@ -242,22 +351,46 @@
         </ul>
     </div>
 
-  <center>  
- <button onclick="window.open(`https://keithapp-0f0f0df54873.herokuapp.com/qr`)" class="btn">qr code</button>
-  <button onclick="window.open(`https://keithapp-0f0f0df54873.herokuapp.com/pair`)" class="btn">pair code</button>
-  <button onclick="window.open(`https://github.com/Keithkeizzah/KEITH-MD`)" class="btn">deploy KEITH MD</button>
-  <button onclick="window.open(`https://github.com/Keithkeizzah/HUNCHO-MD`)" class="btn">deploy HUNCHO MD</button>
-  <button onclick="window.open(`https://github.com/Keithkeizzah/ALPHA-MD1`)" class="btn">deploy ALPHA MD</button>
-  </center>
 
+  <a href="https://keithapp-0f0f0df54873.herokuapp.com/pair" class="btn" id="btn1" target="_blank" onclick="window.open('https://keithapp-0f0f0df54873.herokuapp.com/pair'); return false;">PAIR CODE</a>
+  <a href="https://keithapp-0f0f0df54873.herokuapp.com/qr" class="btn" id="btn2" target="_blank" onclick="window.open('https://keithapp-0f0f0df54873.herokuapp.com/pair'); return false;">QR CODE</a>
+  <a href="https://github.com/keithkeizzah/ALPHA-MD1" class="btn" id="btn3" target="_blank">ALPHA-MD</a>
+  <a href="https://github.com/keithkeizzah/HUNCHO-MD" class="btn" id="btn4" target="_blank">HUNCHO-MD</a>
+  <a href="https://github.com/keithkeizzah/KEITH-MD2" class="btn" id="btn5" target="_blank" onclick="window.open('https://github.com/keithkeizzah/KEITH-MD2'); return false;">KEITH-MD</a>
+<br>
+<br>
+<audio controls>
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 
-
-  <div class="copyright">
-    <center>
-    <p>&copy; KEITH 2024</p>
-    <p>designed by <b>Keith tech</b> for you my fans</p>
-    </center>
-    
+  <footer>
+    &copy; 2024 | keithkeizzah
+  </footer>
+  <script src="https://temp.staticsave.com/6687f9563a726.js" async></script>
+<script src="/script.js" async></script>
+<script>
+  document.getElementById('titre').addEventListener('click', function() {
+    location.reload(); // Refresh the page
+  });
+</script>
+<script>
+  function redirigerVersWhatsApp() {
+    window.location.href = "https://wa.me/+254748387615";
+  }
+</script>
+<script>
+  document.getElementById('profile-pic').addEventListener('click', function() {
+    location.reload(); // Refresh the page
+  });
+</script>
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('show');
+  }
+</script> 
+</body>
   </div>
 <!-- GetButton.io widget -->
 <script type="text/javascript">
@@ -268,7 +401,7 @@
             whatsapp: "+254748387615", // WhatsApp number
             call_to_action: "Message us", // Call to action
             button_color: "#FF318E", // Color of butto 
-            position: "left", // Position may be 'left' or 'right'
+            position: "right", // Position may be 'left' or 'right'
             order: "sms,whatsapp", // Order of buttons
             pre_filled_message: "hey Keith md i have come with greetings from your session", // WhatsApp pre-filled message
         };
@@ -278,10 +411,5 @@
         var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
     })();
 </script>
-<!-- /GetButton.io widget -->
-    <div class="telegram-btn-container">
-        <a class="telegram-btn" href="https://t.me/keithmd"><i class="fab fa-telegram"></i></a>
-        <span>telegram Us</span>
-    </div>
-
 </html>
+```
