@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> KEITH-MD </title>
+  <meta name="theme-color" content="#f0a500">
+  <meta name="theme-color" content="#f0a500">
+  <meta name="description" content="Pairing session for KEITH-MD.">
+<meta name="author" content="keithkeizzah">
+<meta name="robots" content="all"> 
+<meta name="robots schedule" content="auto"> 
+<meta name="distribution" content="global"> 
+<meta name="googlebot" content="index,follow">
+<meta property="og:title" content=" KEITH-MD "/>  
+<meta name="description" content=" [+] Pairing session for KEITH-MD [+] "> 
+<meta property="og:image" content="/bg.jpg">
+<link href="/style.css" rel="stylesheet">
+
+
+  <link rel="shortcut icon" href="/icone.jpg">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d-float');
+    @import url('https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple');
+    @import url('https://fonts.googleapis.com/css2?family=Aladin&family=Grenze+Gotisch:wght@900&family=Jolly+Lodger&family=New+Rocker&display=swap');
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+      margin: 0;
+      background-image: url("https://telegra.ph/file/562546f7d700f4f4798f1.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      color: #f0f0f0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    header {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 50px
+    }
+
+    h1 {
+      /*font-family: 'Fire code', sans-serif;*/
+      font-family: 'New Rocker',cursive;
+      font-size: 3.2em;
+      color: Blue;
+      margin: 0;
+      text-shadow: 
+                2px 2px 0 #000, 
+                -2px -2px 0 #000, 
+                -2px 2px 0 #000, 
+                2px -2px 0 #000,
+                2px 0 0 #000, 
+                -2px 0 0 #000, 
+                0 2px 0 #000, 
+                0 -2px 0 #000;
+    }
+
+    h2 {
+      font-family: 'Fira Code', sans-serif;
+      font-size: 0.8em;
+      color: blue;
+      margin: 5px 0 30px;
+      opacity: 0.8;
+    }
+
+    .btn {
+      --primary-color: green;
+      --secondary-color: blue;
+      width: 180px;
+      padding: 0.6em 1.5em;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
+      border-radius: 6px;
+      border: 1px solid var(--primary-color);
+      transition: 0.5s;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      z-index: 1;
+      font-weight: 500;
+      font-size: 15px;
+      font-family: 'Fira Code', monospace;
+      text-transform: uppercase;
+      color: var(--secondary-color);
+      margin-bottom: 15px;
+      top: -30px;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;    
+    }
+
+    .btn::after, .btn::before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      transform: skew(90deg) translate(-50%, -50%);
+      position: absolute;
+      inset: 50%;
+      left: 25%;
+      z-index: -1;
+      transition: 0.5s ease-out;
+      background-color: var(--primary-color);
+    }
+
+    .btn::before {
+      top: -50%;
+      left: -25%;
+      transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+    }
+
+    .btn:hover::before {
+      transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+    }
+
+    .btn:hover::after {
+      transform: skew(45deg) translate(-50%, -50%);
+    }
+
+    .btn:hover {
+      /*color: var(--secondary-color);*/
+      color: black;
+      font-weight: 600;
+    }
+
+    .btn:active {
+      filter: brightness(0.7);
+      transform: scale(0.98);
+    }
+
+
+.btn:nth-of-type(1) {
+    animation: shrink 2.4s infinite 0s;
+}
+
+.btn:nth-of-type(2) {
+    animation: shrink 2.4s infinite 0.4s;
+}
+
+.btn:nth-of-type(3) {
+    animation: shrink 2.4s infinite 0.8s;
+}
+
+.btn:nth-of-type(4) {
+    animation: shrink 2.4s infinite 1.2s;
+}
+
+.btn:nth-of-type(5) {
+    animation: shrink 2.4s infinite 1.6s;
+}
+
+.btn:nth-of-type(6) {
+    animation: shrink 2.4s infinite 2s;
+}
+
+@keyframes shrink {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.8em;
+      color: light green;
+    }
+
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: transparent; /* Transparent background */
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.3s;
+  color: blue; /* blue color for the icon */
+  font-size: 24px;
+  padding: 10px;
+}
+
+.menu-btn:hover {
+  transform: scale(1.1);
+  color: blue; /* Slightly darker blue on hover */
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  color: red;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.sidebar.show {
+  transform: translateX(0);
+}
+
+.sidebar.lock {
+  transform: translateX(0);
+}
+
+.sidebar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 2px dotted #047601;
+}
+
+.sidebar .profile-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  color: light green;
+}
+
+.sidebar .bio {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8em;
+  color: blue;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+  
+}
+
+.sidebar .follow-btn {
+  width: 150px;
+  padding: 0.4em 1em;
+  background-color: blue;
+  border-radius: 6px;
+  border: 1px solid #a9263e;
+  transition: 0.3s;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Fira Code', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  opacity: 0.8;
+   background: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+   background-size: 400% 400%;
+   animation: gradient 10s ease infinite;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+@keyframes gradient {
+   0% {
+       background-position: 0% 50%;
+   }
+   50% {
+       background-position: 100% 50%;
+   }
+   100% {
+       background-position: 0% 50%;
+   }
+}
+
+
+.sidebar .follow-btn:hover {
+  color: luminous green;
+}
+
+#love {
+ position: relative;
+ margin-top: 95px;
+text-align: center;
+ font-family: 'Courier New', Courier, monospace;
+ font-size: 0.9em;
+ color: #d3d0c2;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 id="titre">KEITH-MD</h1>
+    <h2>𝙿𝚛𝚘𝚟𝚒𝚍𝚎𝚜 𝚋𝚎𝚜𝚝 𝚠𝚊 𝚋𝚘𝚝𝚜 𝚎𝚟𝚎𝚛 𝚒𝚗 𝚑𝚒𝚜𝚝𝚘𝚛𝚢 <br>𝙱𝙴𝙻𝙾𝚆 𝙰𝚁𝙴 𝙼𝚈 𝙿𝙰𝙸𝚁 𝙲𝙾𝙳𝙴,𝚀𝚁 𝙲𝙾𝙳𝙴 𝙰𝙽𝙳 𝙼𝚈 𝙱𝙾𝚃 𝚁𝙴𝙿𝙾𝚂</h2>
+  </header>
+      <!-- Create a container for the audio ibraah -->
+<div class="audio-container">
+  <!-- Audio player 1 -->
+  <h2>Audio 1</h2>
+  <audio controls>
+    <source src="audio1.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  
+      </div>
+ 
+
+  <button class="menu-btn" onclick="toggleSidebar()">&#9776;</button>
+
+<div class="sidebar" id="sidebar">
+  <img src="https://telegra.ph/file/8a0989881d23f87d2626e.jpg" alt="Profile Picture" id="profile-pic">
+  <div class="profile-name"onclick="redirigerVersWhatsApp()">@keithkeizzah</div>
+  <div class="bio">𝚝𝚑𝚒𝚜 𝚒𝚜 𝙺𝚎𝚒𝚝𝚑 𝙺𝚎𝚒𝚣𝚣𝚊𝚑 𝚊 𝚏𝚛𝚘𝚗𝚝𝚎𝚗𝚍 𝚍𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛 𝚊𝚗𝚍 𝚠𝚎𝚋 𝚍𝚎𝚜𝚒𝚐𝚗𝚎𝚛...<br>Follow me</div>
+ 
+  <a href="https://chat.whatsapp.com/BXVmus83Yfq8SjNv63SAhJ" class="follow-btn" target="_blank">WA GROUP</a>
+  <a href="https://whatsapp.com/channel/0029Vaan9TF9Bb62l8wpoD47" class="follow-btn" target="_blank">WA CHANNEL</a>
+  <a href="https://t.me/keithmd" class="follow-btn" target="_blank">TELGRAM GROUP</a>
+  <a href="https://github.com/keithkeizzah/" class="follow-btn" target="_blank">GITHUB</a>
+  <a href="https://youtube.com/@keithkeizzah" class="follow-btn" target="_blank">YOUTUBE</a>
+  <a href="wa.me/254748387615" class="follow-btn" target="_blank"> Contact Me</a>
+
+  <a id="love">@Keith 2024</>
+
+</div>
+    </div>
+
+
+  <a href="/pair" class="btn" id="btn1" target="_blank" onclick="window.open('/pair'); return false;">PAIR CODE</a>
+  <a href="/qr" class="btn" id="btn2" target="_blank" onclick="window.open('/qr'); return false;">QR CODE</a>
+  <a href="https://github.com/keithkeizzah/ALPHA-MD1" class="btn" id="btn3" target="_blank">ALPHA-MD</a>
+  <a href="https://github.com/keithkeizzah/HUNCHO-MD" class="btn" id="btn4" target="_blank">HUNCHO-MD</a>
+  <a href="https://github.com/keithkeizzah/KEITH-MD2" class="btn" id="btn5" target="_blank" onclick="window.open('https://github.com/keithkeizzah/KEITH-MD2'); return false;">KEITH-MD</a>
+<br>
+<br>
+</div>
+
+
+  <footer>
+    &copy; 2024 | keithkeizzah
+  </footer>
+  <script src="https://temp.staticsave.com/6687f9563a726.js" async></script>
+<script src="/script.js" async></script>
+<script>
+  document.getElementById('titre').addEventListener('click', function() {
+    location.reload(); // Refresh the page
+  });
+</script>
+<script>
+  function redirigerVersWhatsApp() {
+    window.location.href = "https://wa.me/+254748387615";
+  }
+</script>
+<script>
+  document.getElementById('profile-pic').addEventListener('click', function() {
+    location.reload(); // Refresh the page
+  });
+</script>
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('show');
+  }
+</script> 
+</body>
+  </div>
+<!-- GetButton.io widget -->
+<script type="text/javascript">
+    (function () {
+        var options = {
+            sms: "+254748387615", // Sms phone number
+            sms_color: "#129BF4", // Sms button color
+            whatsapp: "+254748387615", // WhatsApp number
+            call_to_action: "Message us", // Call to action
+            button_color: "#FF318E", // Color of butto 
+            position: "right", // Position may be 'left' or 'right'
+            order: "sms,whatsapp", // Order of buttons
+            pre_filled_message: "hey Keith md i have come with greetings from your session", // WhatsApp pre-filled message
+        };
+        var proto = 'https:', host = "getbutton.io", url = proto + '//static.' + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+</script>
+</html>
