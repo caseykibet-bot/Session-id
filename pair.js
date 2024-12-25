@@ -99,7 +99,7 @@ router.get('/', async (req, res) => {
             contextInfo: {
               mentionedJid: [Pair_Code_By_Brasho_Kish.user.id], // Mention the sender in the audio message
               externalAdReply: {
-                title: 'Thanks for choosing Alpha Md happy deployment 💜',
+                title: 'Thanks for choosing my bot 😻😻happy deployment 💜',
                 body: 'Regards Keithkeizzah',
                 thumbnailUrl: 'https://i.imgur.com/vTs9acV.jpeg',
                 sourceUrl: 'https://whatsapp.com/channel/0029Vaan9TF9Bb62l8wpoD47',
