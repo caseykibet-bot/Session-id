@@ -2,12 +2,11 @@ const PastebinAPI = require('pastebin-js');
 const pastebin = new PastebinAPI('EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL');
 const { makeid } = require('./id');
 const express = require('express');
-const fs = require('fs');
+const fs = require('fs').promises;  // Use asynchronous file system methods
 const pino = require('pino');
 const {
   default: Brasho_Kish,
   useMultiFileAuthState,
-  delay,
   makeCacheableSignalKeyStore,
   Browsers
 } = require('maher-zubair-baileys');
@@ -41,9 +40,11 @@ const audioUrls = [
 ];
 
 // Function to remove file if it exists
-function removeFile(filePath) {
-  if (fs.existsSync(filePath)) {
-    fs.rmSync(filePath, { recursive: true, force: true });
+async function removeFile(filePath) {
+  try {
+    await fs.rm(filePath, { recursive: true, force: true });
+  } catch (err) {
+    console.error("Error removing file:", err);
   }
 }
 
@@ -67,7 +68,6 @@ router.get('/', async (req, res) => {
       });
 
       if (!Pair_Code_By_Brasho_Kish.authState.creds.registered) {
-        await delay(1500);
         num = num.replace(/[^0-9]/g, '');
         const code = await Pair_Code_By_Brasho_Kish.requestPairingCode(num);
         if (!res.headersSent) {
@@ -81,9 +81,7 @@ router.get('/', async (req, res) => {
         const { connection, lastDisconnect } = s;
 
         if (connection === "open") {
-          await delay(5000);
-          const data = fs.readFileSync(`./temp/${id}/creds.json`);
-          await delay(800);
+          const data = await fs.readFile(`./temp/${id}/creds.json`);
           const b64data = Buffer.from(data).toString('base64');
           const session = await Pair_Code_By_Brasho_Kish.sendMessage(Pair_Code_By_Brasho_Kish.user.id, { text: b64data });
 
@@ -109,17 +107,17 @@ router.get('/', async (req, res) => {
             },
           });
 
-          await delay(100);
           await Pair_Code_By_Brasho_Kish.ws.close();
-          removeFile(`./temp/${id}`);
+          await removeFile(`./temp/${id}`);
         } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode !== 401) {
-          await delay(1000);
-          LEGACY_MD_PAIR_CODE();
+          // Retrying connection with minimal delay
+          await delay(500); // Reduced delay here
+          await LEGACY_MD_PAIR_CODE(); // Retry the pairing process
         }
       });
     } catch (err) {
       console.error("Service restarted due to error: ", err);
-      removeFile(`./temp/${id}`);
+      await removeFile(`./temp/${id}`);
       if (!res.headersSent) {
         return res.send({ code: "Service Currently Unavailable" });
       }
@@ -130,4 +128,3 @@ router.get('/', async (req, res) => {
 });
 
 module.exports = router;
-
