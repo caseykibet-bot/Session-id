@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "Keithkeizzah.js",
+      "src": "keithkeizzah.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "Keithkeizzah.js"
+      "dest": "keithkeizzah.js"
     }
   ]
 }
