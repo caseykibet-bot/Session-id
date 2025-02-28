@@ -6,7 +6,8 @@
     "node" : ">=20.0.0"
     },
     "scripts": {
-    "start": "node keithkeizzah.js"
+          "build": "next build",
+    "start": "next keithkeizzah.js"
   },
   "author": "keith Tech",
   "license": "GPL-3.0 license",
