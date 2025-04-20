@@ -95,8 +95,8 @@ router.get('/', async (req, res) => {
                             externalAdReply: {
                                 title: 'Thanks for choosing 𝗧𝗲𝗱𝗱𝘆𝘁𝗲𝗰𝗵 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 happy deployment 💜',
                                 body: 'Regards 𝗧𝗲𝗱𝗱𝘆𝘁𝗲𝗰𝗵',
-                                thumbnailUrl: 'https://i.imgur.com/vTs9acV.jpeg',
-                                sourceUrl: 'https://whatsapp.com/channel/0029V9TF9Bb62l8wpoD47',
+                                thumbnailUrl: 'https://files.catbox.moe/8v1o4d.jpg',
+                                sourceUrl: 'https://chat.whatsapp.com/KnL0Ft6gvHDGP2lH3oN5Z5',
                                 mediaType: 1,
                                 renderLargerThumbnail: true,
                             },
