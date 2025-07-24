@@ -1,12 +1,12 @@
 {
-    "description": "Teddy session",
-    "main": "./keithkeizzah.js",
+    "description": "VolTah-session",
+    "main": "./voltah.js",
   "engines" : { 
     "npm" : ">=9.7.2",
     "node" : ">=20.0.0"
     },
     "scripts": {
-    "start": "node keithkeizzah.js"
+    "start": "node voltah.js"
   },
   "author": "Giddy Tennor",
   "license": "GPL-3.0 license",
