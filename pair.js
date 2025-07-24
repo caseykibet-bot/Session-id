@@ -3,124 +3,111 @@ const pastebin = new PastebinAPI('EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL');
 const { makeid } = require('./id');
 const express = require('express');
 const fs = require('fs');
+let router = express.Router();
 const pino = require('pino');
 const {
-    default: Brasho_Kish,
+    default: Mbuvi_Tech,
     useMultiFileAuthState,
     delay,
     makeCacheableSignalKeyStore,
-} = require('maher-zubair-baileys');
+    Browsers
+} = require('@whiskeysockets/baileys');
 
-const router = express.Router();
-
-const audioUrls = [
-    "https://files.catbox.moe/hpwsi2.mp3",
-    "https://files.catbox.moe/xci982.mp3",
-    "https://files.catbox.moe/utbujd.mp3",
-    "https://files.catbox.moe/w2j17k.m4a",
-    "https://files.catbox.moe/851skv.m4a",
-    "https://files.catbox.moe/qnhtbu.m4a",
-    "https://files.catbox.moe/lb0x7w.mp3",
-    "https://files.catbox.moe/efmcxm.mp3",
-    "https://files.catbox.moe/gco5bq.mp3",
-    "https://files.catbox.moe/26oeeh.mp3",
-    "https://files.catbox.moe/a1sh4u.mp3",
-    "https://files.catbox.moe/vuuvwn.m4a",
-    "https://files.catbox.moe/wx8q6h.mp3",
-    "https://files.catbox.moe/uj8fps.m4a",
-    "https://files.catbox.moe/dc88bx.m4a",
-    "https://files.catbox.moe/tn32z0.m4a",
-    "https://files.catbox.moe/9fm6gi.mp3",
-    "https://files.catbox.moe/9h8i2a.mp3",
-    "https://files.catbox.moe/5pm55z.mp3",
-    "https://files.catbox.moe/zjk77k.mp3",
-    "https://files.catbox.moe/fe5lem.m4a",
-    "https://files.catbox.moe/4b1ohl.mp3"
-];
-
-// Helper function to remove files
-function removeFile(filePath) {
-    if (!fs.existsSync(filePath)) return false;
-    fs.rmSync(filePath, { recursive: true, force: true });
+function removeFile(FilePath) {
+    if (!fs.existsSync(FilePath)) return false;
+    fs.rmSync(FilePath, { recursive: true, force: true });
 }
 
-// Route handler
 router.get('/', async (req, res) => {
     const id = makeid();
     let num = req.query.number;
-
-    async function LEGACY_MD_PAIR_CODE() {
+    
+    async function Mbuvi_MD_PAIR_CODE() {
         const { state, saveCreds } = await useMultiFileAuthState('./temp/' + id);
         try {
-            const Pair_Code_By_Brasho_Kish = Brasho_Kish({
+            let Pair_Code_By_Mbuvi_Tech = Mbuvi_Tech({
                 auth: {
                     creds: state.creds,
                     keys: makeCacheableSignalKeyStore(state.keys, pino({ level: 'fatal' }).child({ level: 'fatal' })),
                 },
                 printQRInTerminal: false,
                 logger: pino({ level: 'fatal' }).child({ level: 'fatal' }),
-                browser: ['Chrome (Linux)', '', '']
+                browser: Browsers.macOS('Chrome')
             });
 
-            if (!Pair_Code_By_Brasho_Kish.authState.creds.registered) {
+            if (!Pair_Code_By_Mbuvi_Tech.authState.creds.registered) {
                 await delay(1500);
                 num = num.replace(/[^0-9]/g, '');
-                const code = await Pair_Code_By_Brasho_Kish.requestPairingCode(num);
-
+                const code = await Pair_Code_By_Mbuvi_Tech.requestPairingCode(num);
                 if (!res.headersSent) {
                     await res.send({ code });
                 }
             }
 
-            Pair_Code_By_Brasho_Kish.ev.on('creds.update', saveCreds);
-            Pair_Code_By_Brasho_Kish.ev.on('connection.update', async (s) => {
+            Pair_Code_By_Mbuvi_Tech.ev.on('creds.update', saveCreds);
+            Pair_Code_By_Mbuvi_Tech.ev.on('connection.update', async (s) => {
                 const { connection, lastDisconnect } = s;
                 if (connection === 'open') {
                     await delay(5000);
-                    const data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
+                    let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                     await delay(800);
-                    const b64data = Buffer.from(data).toString('base64');
-                    const session = await Pair_Code_By_Brasho_Kish.sendMessage(Pair_Code_By_Brasho_Kish.user.id, { text: '' + b64data });
+                    let b64data = Buffer.from(data).toString('base64');
+                    let session = await Pair_Code_By_Mbuvi_Tech.sendMessage(Pair_Code_By_Mbuvi_Tech.user.id, { text: 'trashcore~' + b64data });
 
-                    // Send random audio after session
-                    const randomAudioUrl = audioUrls[Math.floor(Math.random() * audioUrls.length)];
-                    await Pair_Code_By_Brasho_Kish.sendMessage(Pair_Code_By_Brasho_Kish.user.id, {
-                        audio: { url: randomAudioUrl },
-                        mimetype: 'audio/mpeg',
-                        ptt: true,
-                        waveform: [100, 0, 100, 0, 100, 0, 100], // Optional waveform pattern
-                        fileName: 'shizo',
-                        contextInfo: {
-                            mentionedJid: [Pair_Code_By_Brasho_Kish.user.id], // Mention the sender in the audio message
-                            externalAdReply: {
-                                title: 'Thanks for choosing 𝗧𝗲𝗱𝗱𝘆𝘁𝗲𝗰𝗵 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 happy deployment 💜',
-                                body: 'Regards 𝗧𝗲𝗱𝗱𝘆𝘁𝗲𝗰𝗵',
-                                thumbnailUrl: 'https://files.catbox.moe/8v1o4d.jpg',
-                                sourceUrl: 'https://chat.whatsapp.com/KnL0Ft6gvHDGP2lH3oN5Z5',
-                                mediaType: 1,
-                                renderLargerThumbnail: true,
-                            },
-                        },
-                    }, { quoted: session });
+                    let Mbuvi_MD_TEXT = `
+        
+╔════════════════════◇
+║『 SESSION CONNECTED』
+║ ✨VolTah-XMD🔷
+║ ✨Giddy Tennor 🔷
+╚════════════════════╝
+
+
+---
+
+╔════════════════════◇
+║『 YOU'VE CHOSEN VolTah XMD 』
+║ -Set the session ID in Heroku:
+║ - SESSION_ID: 
+╚════════════════════╝
+╔════════════════════◇
+║ 『••• _V𝗶𝘀𝗶𝘁 𝗙𝗼𝗿_H𝗲𝗹𝗽 •••』
+║❍ 𝐘𝐨𝐮𝐭𝐮𝐛𝐞: youtube.com/@giddynokia
+║❍ 𝐎𝐰𝐧𝐞𝐫: 254756182478
+║❍ 𝐑𝐞𝐩𝐨: https://github.com/Tennor-modz/Bellah-Xmd 
+║❍ 𝐖𝐚𝐆𝗿𝐨𝐮𝐩: https://chat.whatsapp.com/CzFlFQrkdzxFw0pxCBYM7H
+║❍ 𝐖𝐚𝐂𝐡𝐚𝐧𝐧𝐞𝐥: https://whatsapp.com/channel/0029VaPZWbY1iUxVVRIIOm0D
+║❍ 𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦: _https://www.instagram.com/giddy_tennor_?igsh=YzZ0NDRoaXFxM2Zk
+║ ☬ ☬ ☬ ☬
+╚═════════════════════╝
+𒂀 Enjoy VolTah MD
+
+
+---
+
+Don't Forget To Give Star⭐ To My Repo
+______________________________`;
+
+                    await Pair_Code_By_Mbuvi_Tech.sendMessage(Pair_Code_By_Mbuvi_Tech.user.id, { text: Toxic_MD_TEXT }, { quoted: session });
 
                     await delay(100);
-                    await Pair_Code_By_Brasho_Kish.ws.close();
-                    removeFile('./temp/' + id);
-                } else if (connection === 'close' && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode !== 401) {
+                    await Pair_Code_By_Mbuvi_Tech.ws.close();
+                    return await removeFile('./temp/' + id);
+                } else if (connection === 'close' && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
                     await delay(10000);
-                    LEGACY_MD_PAIR_CODE();
+                    Mbuvi_MD_PAIR_CODE();
                 }
             });
         } catch (err) {
-            console.log('service restarted', err);
-            removeFile('./temp/' + id);
+            console.log('Service restarted');
+            await removeFile('./temp/' + id);
             if (!res.headersSent) {
                 await res.send({ code: 'Service Currently Unavailable' });
             }
         }
     }
-
-    await LEGACY_MD_PAIR_CODE();
+    
+    return await Mbuvi_MD_PAIR_CODE();
 });
 
 module.exports = router;
