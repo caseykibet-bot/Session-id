@@ -6,7 +6,7 @@ const fs = require('fs');
 let router = express.Router();
 const pino = require('pino');
 const {
-    default: Mbuvi_Tech,
+    default: makeWASocket,
     useMultiFileAuthState,
     delay,
     makeCacheableSignalKeyStore,
@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
     async function Mbuvi_MD_PAIR_CODE() {
         const { state, saveCreds } = await useMultiFileAuthState('./temp/' + id);
         try {
-            let Pair_Code_By_Mbuvi_Tech = Mbuvi_Tech({
+            let Pair_Code_By_Mbuvi_Tech = makeWASocket({
                 auth: {
                     creds: state.creds,
                     keys: makeCacheableSignalKeyStore(state.keys, pino({ level: 'fatal' }).child({ level: 'fatal' })),
@@ -38,6 +38,8 @@ router.get('/', async (req, res) => {
             if (!Pair_Code_By_Mbuvi_Tech.authState.creds.registered) {
                 await delay(1500);
                 num = num.replace(/[^0-9]/g, '');
+                
+                // Request pairing code using the new method
                 const code = await Pair_Code_By_Mbuvi_Tech.requestPairingCode(num);
                 if (!res.headersSent) {
                     await res.send({ code });
@@ -55,13 +57,11 @@ router.get('/', async (req, res) => {
                     let session = await Pair_Code_By_Mbuvi_Tech.sendMessage(Pair_Code_By_Mbuvi_Tech.user.id, { text: 'trashcore~' + b64data });
 
                     let Mbuvi_MD_TEXT = `
-        
 ╔════════════════════◇
 ║『 SESSION CONNECTED』
 ║ ✨VolTah-XMD🔷
 ║ ✨Giddy Tennor 🔷
 ╚════════════════════╝
-
 
 ---
 
@@ -82,13 +82,12 @@ router.get('/', async (req, res) => {
 ╚═════════════════════╝
 𒂀 Enjoy VolTah MD
 
-
 ---
 
 Don't Forget To Give Star⭐ To My Repo
 ______________________________`;
 
-                    await Pair_Code_By_Mbuvi_Tech.sendMessage(Pair_Code_By_Mbuvi_Tech.user.id, { text: Toxic_MD_TEXT }, { quoted: session });
+                    await Pair_Code_By_Mbuvi_Tech.sendMessage(Pair_Code_By_Mbuvi_Tech.user.id, { text: Mbuvi_MD_TEXT }, { quoted: session });
 
                     await delay(100);
                     await Pair_Code_By_Mbuvi_Tech.ws.close();
@@ -99,7 +98,7 @@ ______________________________`;
                 }
             });
         } catch (err) {
-            console.log('Service restarted');
+            console.log('Service restarted', err);
             await removeFile('./temp/' + id);
             if (!res.headersSent) {
                 await res.send({ code: 'Service Currently Unavailable' });
