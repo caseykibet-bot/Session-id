@@ -12,7 +12,6 @@
   "license": "GPL-3.0 license",
   "dependencies": {
     "baileys-pro": "latest",
-    "maher-zubair-baileys": "^6.6.5",
      "@whiskeysockets/baileys": "^6.7.18",
     "qrcode": "^1.5.3",
     "awesome-phonenumber": "^2.64.0",
